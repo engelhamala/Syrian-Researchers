@@ -1,0 +1,44 @@
+@font-face {
+    font-family: Cairo;
+    src: url("../fonts/Cairo/Cairo-VariableFont_wght.ttf") format("opentype");
+}
+body {
+    font-family: Cairo;
+    direction: rtl;
+}
+/* topbar */
+
+.submenu-item-list::after {
+    content: "\f104";
+    right: -3px;
+}
+
+@media (max-width: 767px) {
+.item-list:hover .item-link {
+        position: relative;
+    }
+    .item-list:hover .item-link i {
+    position: absolute;
+    left: 76px;
+    top: 10px;
+    }
+    .submenu-item {
+        margin: 0px 26px;
+    }
+.item-list:hover .dropdown-submenu-level {
+    right: 0px;
+    left: unset;
+}
+.submenu-item-list:hover {
+    padding-inline-start: unset;
+}
+}
+@media (max-width: 767px) {
+.submenu-item {
+    padding: 0;
+}
+}
+.angle::before {
+    right: 5px;
+    left: unset;
+}

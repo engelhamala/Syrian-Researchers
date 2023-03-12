@@ -1,0 +1,296 @@
+/* ********************************
+*************public style**********
+*********************************** */
+@font-face {
+    font-family: myriad;
+    src: url("../fonts/myriad-pro-regular_AkvRo/Myriad Pro Regular/Myriad Pro Regular.ttf")
+        format("opentype");
+}
+
+:root {
+    --main-color: #263b51;
+    --second-color: rgb(39, 41, 59);
+    --background-color: #eee;
+    --green-color: hsl(181deg 77% 50%);
+    --paragraph-color: hsl(0deg 0% 67%);
+    --transition: 0.4s linear;
+    --box-shadow: 0 3px 6px 0 rgb(0 0 0 / 13%), 0 3px 4px 0 rgb(0 0 0 / 14%);
+    --line-height: 1.7;
+    --instagram: conic-gradient(
+        from 180deg at 50% 50%,
+        #b8d2f1 0deg,
+        #f289aa 60deg,
+        #c68bf0 106.09deg,
+        #d164da 153.75deg,
+        #c963e8 221.25deg,
+        #bfc2e8 258.75deg,
+        #ffc999 288.75deg,
+        #d0d8c9 315deg,
+        #bad0f1 334.13deg,
+        #ced8cb 358.97deg,
+        rgba(255, 255, 255, 0) 360deg
+    );
+    --facebook :#3c5a99;
+    --twitter: #1da1f2;
+}
+* {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: myriad;
+    font-size: 17px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    direction: ltr;
+}
+a,
+a:hover {
+    color: inherit;
+    transition: var(--transition);
+    text-decoration: none;
+}
+button,
+button:focus,
+button:hover {
+    border: none !important;
+    /* background: none; */
+    outline: none !important;
+    box-shadow: none !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+}
+ul.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+input {
+    outline: none;
+}
+
+/* ******************************************
+*****************setcion home****************/
+body {
+    background: -moz-linear-gradient(
+        top,
+        rgba(239, 239, 239, 1) 0%,
+        rgba(255, 255, 255, 1) 47%,
+        rgba(224, 224, 224, 1) 100%,
+        rgba(232, 232, 232, 1) 100%
+    );
+    background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0%, rgba(239, 239, 239, 1)),
+        color-stop(47%, rgba(255, 255, 255, 1)),
+        color-stop(100%, rgba(224, 224, 224, 1)),
+        color-stop(100%, rgba(232, 232, 232, 1))
+    );
+}
+.home-section {
+    margin-top: 75px;
+}
+.home-item {
+    background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0%, rgba(239, 239, 239, 1)),
+        color-stop(47%, rgba(255, 255, 255, 1)),
+        color-stop(100%, rgba(224, 224, 224, 1)),
+        color-stop(100%, rgba(232, 232, 232, 1))
+    );
+    margin: 15px 0;
+}
+.section-title {
+    text-align: center;
+    padding: 30px 0;
+}
+.first-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    padding: 10px 0;
+    text-transform: capitalize;
+}
+.second-title {
+    font-size: 1.9rem;
+    font-weight: bold;
+}
+.home-description {
+    border-inline-start: 1px solid rgb(226, 226, 226);
+    padding: 15px;
+    text-align: center;
+}
+.description-img img {
+    width: 100px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    transition: var(--transition);
+    opacity: 0.8;
+}
+.description-img img:hover {
+    border-color: #dbdbff;
+    opacity: 1;
+}
+/* ******************************************
+*****************setcion news****************/
+
+.news {
+    background: #eee;
+    padding: 31px 50px 0px;
+    border-top: 1px solid #999;
+}
+.news-item {
+    margin-bottom: 20px;
+    position: relative;
+}
+.news-image img {
+    width: 100%;
+}
+.item-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--second-color);
+    color: var(--background-color);
+    padding: 2px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.comments,
+.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.icon {
+    font-size: 0.8rem;
+}
+.overlay {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: 0.7;
+    visibility: visible;
+    transition: var(--transition);
+}
+.news-item:hover .overlay {
+    opacity: 0;
+    visibility: hidden;
+}
+.item-title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    visibility: visible;
+    transition: var(--transition);
+    color: #07a9f4;
+    text-shadow: 2px 2px 5px rgb(0 0 0);
+    font-size: 1.2rem;
+    line-height: 25px;
+}
+.news-item:hover .item-title {
+    opacity: 0;
+    visibility: hidden;
+}
+/* ******************************************
+*****************setcion footer****************/
+.footer {
+    background-color: #1a1a0b;
+    margin-top: 100px;
+    padding: 30px;
+}
+.footeritem-title {
+    color: #fff;
+    font-size: 1.5rem;
+    position: relative;
+    margin-bottom: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+}
+.content {
+    margin: 30px 0;
+}
+.quick-item-list {
+    margin-bottom: 10px;
+    transition: var(--transition);
+}
+.quick-item-list:hover {
+    color: #607d8b;
+    letter-spacing: 0.5px;
+}
+.angle {
+    text-decoration: none;
+    color: #fff;
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+}
+.angle::before {
+    content: "\f111";
+    position: absolute;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 0.6rem;
+    left: 5px;
+    top: 8px;
+    color: #fff;
+}
+.footer-img {
+    background-color: #fff;
+    margin: 1px;
+    border: 1px solid #999;
+    opacity: 0.7;
+    transition: var(--transition);
+}
+.footer-img:hover {
+    opacity: 1;
+}
+.footer-img img {
+    max-width: 100px;
+    max-height: 100px;
+}
+/* ==================media============== */
+@media (max-width: 767px) {
+    .content {
+        font-size: 0.9rem;
+    }
+    .footeritem-title {
+        font-size: 1.2rem;
+    }
+}
+.powred {
+    background-color: #1a1a0b;
+    color: #999;
+    text-align: center;
+    font-size: 0.9rem;
+}
